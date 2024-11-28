@@ -1,0 +1,300 @@
+/* Загальні стилі для хедера */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ff4081;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.login-btn {
+    background-color: white;
+    color: #ff4081;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Бургер-меню */
+.burger-toggle {
+    display: none;
+}
+
+.burger-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    width: 30px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Медіа-запити для адаптації */
+@media (max-width: 760px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #ff4081;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .burger-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .burger-icon {
+        display: flex;
+    }
+
+    .login-btn {
+        display: none;
+    }
+}
+
+
+@media (max-width: 760px) {
+    .hero-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 1220px;
+        margin-top: 100px; /* Висота секції дорівнює висоті екрану */
+        background-image: url("C:\Users\vlady\OneDrive\Desktop\Layout\img\mainBG.jpg"); /* Замініть на шлях до вашої картинки */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .hero-section::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Легка затемненість */
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2; /* Щоб текст був поверх затемнення */
+        text-align: center;
+        color: #fff;
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #ff4081;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+    }
+
+    .hero-content .cta-button:hover {
+        background-color: #e00065;
+    }
+}
+
+
+@media screen and (max-width: 760px) {
+  /* Секція Body Section */
+  .body-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Контейнер зображень */
+  .body-section .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Відстань між зображеннями */
+    margin-bottom: 20px;
+  }
+
+  /* Зображення 1 */
+  .body-section .images .image1 {
+    width: 80%;
+    max-width: 300px;
+    height: 200px;
+    background-image: url("C:/Users/vlady/OneDrive/Desktop/Layout/img/multi1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  /* Зображення 2 */
+  .body-section .images .image2 {
+    width: 80%;
+    max-width: 300px;
+    height: 200px;
+    background-image: url("C:/Users/vlady/OneDrive/Desktop/Layout/img/multi2.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: -50px auto 0; /* Накладаємо частково зверху */
+  }
+
+  /* Текстова частина */
+  .body-section .text-content {
+    margin-top: 20px;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .body-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ff4e8a;
+  }
+
+  .body-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+  }
+
+  .body-section .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #ff4e8a;
+    border: 2px solid #ff4e8a;
+    border-radius: 25px;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .body-section .btn:hover {
+    background: #ff4e8a;
+    color: #ffffff;
+  }
+}
+
+
+
+/* Mobile optimization for screens up to 540px */
+@media screen and (max-width: 540px) {
+  .hero-section h1 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  .hero-section button {
+    font-size: 16px;
+  }
+
+  .content-section {
+    text-align: center;
+  }
+
+  .content-section .text {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  .footer .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Mobile optimization for screens up to 360px */
+@media screen and (max-width: 360px) {
+  .hero-section h1 {
+    font-size: 20px;
+  }
+
+  .hero-section button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .content-section {
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .content-section .text {
+    font-size: 12px;
+  }
+
+  .footer {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .footer .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+}
